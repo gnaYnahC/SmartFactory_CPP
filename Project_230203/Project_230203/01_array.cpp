@@ -24,7 +24,7 @@ int main() {
 	std::cout << fnums[1] << "\n"; // 3.14 출력
 
 
-	std::string friends[] = { "홍길동", "성춘향", "코딩온" }; // 선언과 초기화 []몇개를 초기화 할 지 쓰지 않아도 된다.
+	std::string friends[] = { "홍길동", "성춘향", "코딩온" }; // 선언과 초기화가 함께 될 땐 몇개의 원소(인덱스)를 쓸 지 적지 않아도 된다.
 	std::cout << friends[0] << "\n";
 	std::cout << friends[1] << "\n";
 
@@ -33,10 +33,9 @@ int main() {
 	}
 
 	// sizeof(); : sizeof안에 변수 or 타입을 인자로 넘겨줌. 크기를 byte단위로 구해줌
-	for (int i = 0; i < sizeof(friends)/sizeof(std::string); i++) { //sizeof[0]으로 나눠주어도 된다.
+	for (int i = 0; i < sizeof(friends)/sizeof(std::string); i++) { //sizeof[0]으로 나눠도 된다.
 		std::cout << friends[i] << std::endl;
 	}
-
 
 
 	for (auto f : friends) { //for-each문은 배열을 안쓰고 각각의 값에 갈 수 있음, 배열의 크기 만큼 돔
