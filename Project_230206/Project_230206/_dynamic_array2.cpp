@@ -1,16 +1,16 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 int main() {
-	//---------2Â÷¿ø µ¿Àû ¹è¿­---------
-	// numÀ» ¹Þ¾Æ¼­ num X num ¹è¿­
+	//---------2ì°¨ì› ë™ì  ë°°ì—´---------
+	// numì„ ë°›ì•„ì„œ num X num ë°°ì—´
 	int num;
 	std::cin >> num;
 	int** num_arr = new int* [num];
-	for (int i = 0; i < num; i++) { //¹è¿­ÀÇ Å©±â Àâ±â
+	for (int i = 0; i < num; i++) { //ë°°ì—´ì˜ í¬ê¸° ìž¡ê¸°
 		num_arr[i] = new int[num];
 	}
 
-	for (int i = 0; i < num; i++) { //¹è¿­ÀÇ °ª ¼³Á¤
+	for (int i = 0; i < num; i++) { //ë°°ì—´ì˜ ê°’ ì„¤ì •
 		for (int j = 0; j < num; j++) {
 			num_arr[i][j] = num + i;
 			std::cout << num_arr[i][j] << " ";
@@ -18,7 +18,7 @@ int main() {
 		std::cout << "\n";
 	}
 
-	//-------2Â÷¿ø ¹è¿­ ¹Ý³³-----------
+	//-------2ì°¨ì› ë°°ì—´ ë°˜ë‚©-----------
 	for (int i = 0; i < num; i++) {
 		delete[] num_arr[i];
 	}
