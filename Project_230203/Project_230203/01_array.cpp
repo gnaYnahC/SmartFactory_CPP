@@ -9,10 +9,10 @@ int main() {
 
 	std::string friend1 = "홍길동";
 	std::string friend2 = "성춘향";
-	//std::string friends[2]; //선언만 할 경우 초기화 할 갯수를 써야한다.
-	//friends[0] = "홍길동"; //초기화
-	//friends[1] = "성춘향"; //초기화
-	//friends[1] = "코딩온"; // 변경 가능
+	std::string friends[2]; //선언만 할 경우 초기화 값을 써야한다.
+	friends[0] = "홍길동"; //초기화
+	friends[1] = "성춘향"; //초기화
+	friends[1] = "코딩온"; // 변경 가능
 
 	int nums[] = { 1, 2, 3 };
 	std::cout << nums[2] << "\n"; // 3출력

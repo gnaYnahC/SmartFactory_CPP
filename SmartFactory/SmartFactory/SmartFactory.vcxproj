@@ -21,9 +21,10 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cf24bfde-bb9b-4239-ad00-0c0f39d1fd1e}</ProjectGuid>
-    <RootNamespace>Project230203</RootNamespace>
+    <ProjectGuid>{a581274c-77ab-428b-a365-f8c8776c1ac6}</ProjectGuid>
+    <RootNamespace>SmartFactory</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>SmartFactory_20230201</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -127,15 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="01_array.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="01_array_test1.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="01_array_test2.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="01_variable.cpp" />
+    <ClCompile Include="00_smartfactory.cpp" />
+    <ClCompile Include="test_230201.cpp" />
+    <ClCompile Include="_test_230202.cpp" />
+    <ClCompile Include="_반복문.cpp" />
+    <ClCompile Include="_연산자.cpp" />
+    <ClCompile Include="_조건문.cpp" />
+    <ClCompile Include="_함수.cpp" />
+    <ClCompile Include="_함수test2_230202.cpp" />
+    <ClCompile Include="_함수test3_230202.cpp" />
+    <ClCompile Include="_함수test_230202.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
