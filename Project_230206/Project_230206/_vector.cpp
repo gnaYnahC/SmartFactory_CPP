@@ -78,14 +78,14 @@ int main() {
 	}
 
 
-	//std::cout << "\n";
+	std::cout << "\n";
 
-	//
-	//std::vector<int> q = { 1,2,3,4,5 };
-	//q.clear(); // 배열의 모든 원소 삭제. size 0
-	//for (int i = 0; i < q.size(); i++) {
-	//	std::cout << q.at(i) << " ";
-	//}
+	
+	std::vector<int> q = { 1,2,3,4,5 };
+	q.clear(); // 배열의 모든 원소 삭제. size 0
+	for (int i = 0; i < q.size(); i++) {
+		std::cout << q.at(i) << " ";
+	}
 
 	
 

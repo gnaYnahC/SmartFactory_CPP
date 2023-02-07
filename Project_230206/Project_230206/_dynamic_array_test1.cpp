@@ -1,5 +1,5 @@
 ﻿#include <iostream>
-
+using namespace std;
 // (1) 사용자로부터 x, y 2개의 자연수를 입력 받기
 // (2) 만약 사용자가 x와 y에 0이나 음수를 입력한다면 에러 메세지를 출력 후 다시 입력 받기
 // (3) x*y의 크기를 갖는 이차원 동적 배열 arr을 선언
@@ -31,7 +31,7 @@ int main() {
 
 	for (int i = 0; i < y; i++) {
 		for (int j = 0; j < x; j++) {
-			arr2[i][j] = num++;
+			arr2[i][j] = ++num;
 			std::cout << arr2[i][j] << " ";
 		}
 		std::cout << "\n";
@@ -40,6 +40,36 @@ int main() {
 	for (int i = 0; i < x; i++) {
 		delete[] arr2[i];
 	}
-	delete arr2;
+	delete[] arr2;
+	
+
+	//int x, y;
+	//while (true) {
+	//	cout << "Enter two natural numbers x and y: ";
+	//	cin >> x >> y;
+	//	if (x <= 0 || y <= 0) {
+	//		cout << "Error: x and y must be positive numbers." << endl;
+	//		continue;
+	//	}
+	//	break;
+	//}
+
+	//int arr[100][100];
+	//int num = 1;
+	//for (int i = 0; i < x; i++) {
+	//	for (int j = 0; j < y; j++) {
+	//		arr[i][j] = num;
+	//		num++;
+	//	}
+	//}
+
+	//for (int i = 0; i < x; i++) {
+	//	for (int j = 0; j < y; j++) {
+	//		cout << arr[i][j] << " ";
+	//	}
+	//	cout << endl;
+	//}
+
+	//return 0;
 
 }
