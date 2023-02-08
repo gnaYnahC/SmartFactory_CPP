@@ -60,6 +60,8 @@ int main() {
 	cout << c.age<<"살 " << c.name << " " << c.breed;
 	cout << endl;
 
+
+	//클래스 내에 있는 함수 호출
 	c.mew();
 	c.eat();
 }

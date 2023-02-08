@@ -24,5 +24,17 @@
     <ClCompile Include="_class01.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="_class01_private.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="_protected01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="_class_test01.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="_class_test02.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
