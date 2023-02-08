@@ -1,45 +1,37 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+
 using namespace std;
 
+struct Member {
+    string name;
+    string password;
+};
+
 int main() {
-	ifstream file_r;
-	ofstream file("member.txt");
+    Member members[3];
 
-	if (file.fail()) {
-		cout << "파일 없음" << endl;
-		return -1;
-	}
+    // 사용자에게 3명의 회원에 대한 이름 비밀번호 입력받기
+    for (int i = 0; i < 3; i++) {
+        cout << i + 1 << "번째 회원의 아이디와 비밀번호를 입력하세요" << ": ";
+        cin >> members[i].name >> members[i].password;
+    }
 
-	string name, password;
+    // 사용자로부터 입력된 정보를 member.txt에 기록
+    ofstream memberFile("member.txt");
+    for (int i = 0; i < 3; i++) {
+        memberFile << members[i].name << " " << members[i].password << endl;
+    }
+    memberFile.close();
 
-	for (int i = 0; i < 3; i++) {
-		cout << i + 1 << "번째 회원 이름 : ";
-		cin >> name;
-		cout << i + 1 << "번째 회원 비밀번호: ";
-		cin >> password;
-		file << name << " " << password << "\n";
-	}
+    // member.txt에 저장된 회원명부 출력
+    cout << "회원 명부:" << endl;
+    ifstream inputFile("member.txt");
+    while (inputFile >> members[0].name >> members[0].password) {
+        cout << members[0].name << " " << members[0].password << endl;
+    }
+    inputFile.close();
 
-	cout << endl;
-	cout << "----------회원 명부 파일 읽기----------\n";
-	cout << endl;
-
-	file_r.open("member2.txt");
-
-	string line, file_content = "";
-
-	if (file_r.fail()) {
-		cout << "파일 없음" << endl;
-		return -1;
-	}
-
-	while (getline(file_r, line)) {
-		file_content += line + "\n";
-	}
-
-	cout << file_content;
-
-
+    return 0;
 }
