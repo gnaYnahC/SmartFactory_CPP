@@ -3,6 +3,9 @@
 #include <string>
 using namespace std;
 
+
+//getter: 변수를 반환해주는 메소드
+//setter: 변수를 변경시켜주는 메소드
 class Cat { 
 	string name;
 	string breed;
@@ -34,8 +37,7 @@ public:
 	}
 };
 
-//getter: 변수를 반환해주는 메소드
-//setter: 변수를 변경시켜주는 메소드
+
 
 int main() {
 
