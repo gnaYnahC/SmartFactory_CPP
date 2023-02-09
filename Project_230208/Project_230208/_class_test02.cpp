@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-// Charactor 클래스 선언
-class Charactor {
+// Character 클래스 선언
+class Character {
 	// 레벨, 이름, 아이템 개수 멤버 변수
 	int level;
 	string name;
@@ -11,7 +11,7 @@ class Charactor {
 
 public:
 	// 생성자
-	Charactor(string name) {
+	Character(string name) {
 		// this 포인터를 사용해 name 멤버 변수에 인자로 받은 name 값 할당
 		this->name = name;
 		level = 0; // 레벨 초기값 0
@@ -27,20 +27,26 @@ public:
 	// 레벨 업 메서드
 	void level_up() {
 		++level; // 레벨 1 증가
-		cout << "레벨 업!!!!!!!!\n" << "현재 레벨: " << level << "\n";
+		cout << "레벨 업!!\n" << "현재 레벨: " << level << "\n";
 	}
 
 	// 아이템 획득 메서드
 	void get_item() {
 		item++; // 아이템 개수 1 증가
-		cout << "현재 item 갯수: " << item << "\n";
+		cout << "아이템 줍줍! \n" << "현재 item 갯수: " << item << "\n";
 	}
 
 	// 아이템 사용 메서드
 	void set_item() {
-		--item; // 아이템 개수 1 감소
-		cout << "아이템 사용! \n" << "현재 item 갯수: " << item << "\n";
+		if (item <= 0) { // 아이템의 개수가 음수가 되지 않게
+			cout << "아이템이 없습니다. \n";
+		}
+		else {
+			--item; // 아이템 개수 1 감소
+			cout << "아이템 사용! \n" << "현재 item 갯수: " << item << "\n";
+		}
 	}
+
 
 	// 캐릭터 정보 출력 메서드
 	void char_status() {
@@ -60,7 +66,7 @@ int main() {
 	cin >> name;
 	
     // 캐릭터 객체 생성
-	Charactor game(name);
+	Character game(name);
 	
 	// 게임 루프
 	while(1) {
@@ -92,7 +98,7 @@ int main() {
 			game.get_item();
 			break;
 
-            // 아이템 장착
+            // 아이템 사용
 		case 4:
 			game.set_item();
 			break;
