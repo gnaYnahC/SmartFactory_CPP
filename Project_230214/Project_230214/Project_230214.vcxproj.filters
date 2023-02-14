@@ -13,5 +13,69 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\파일분할01">
+      <UniqueIdentifier>{ed5297f9-8e39-40af-b32b-376e9a1a1edd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\파일분할01">
+      <UniqueIdentifier>{eff263de-ba6d-422e-8e68-cdc08ec6357d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\파일분할 실습">
+      <UniqueIdentifier>{59d8fbbf-fc58-4bcc-8d61-d7225b089269}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\파일분할 실습">
+      <UniqueIdentifier>{cfc37a19-5c2a-4e96-9fbe-7b253fbe5523}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\난수 생성">
+      <UniqueIdentifier>{35034197-751a-4e39-ae20-a1f3e442ea4c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="01_file.cpp">
+      <Filter>소스 파일\파일분할01</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>소스 파일\파일분할01</Filter>
+    </ClCompile>
+    <ClCompile Include="Student.cpp">
+      <Filter>소스 파일\파일분할01</Filter>
+    </ClCompile>
+    <ClCompile Include="02_Snack.cpp">
+      <Filter>소스 파일\파일분할 실습</Filter>
+    </ClCompile>
+    <ClCompile Include="Candy.cpp">
+      <Filter>소스 파일\파일분할 실습</Filter>
+    </ClCompile>
+    <ClCompile Include="Snack.cpp">
+      <Filter>소스 파일\파일분할 실습</Filter>
+    </ClCompile>
+    <ClCompile Include="Chocolate.cpp">
+      <Filter>소스 파일\파일분할 실습</Filter>
+    </ClCompile>
+    <ClCompile Include="Random_practice.cpp">
+      <Filter>소스 파일\난수 생성</Filter>
+    </ClCompile>
+    <ClCompile Include="test_rotto.cpp">
+      <Filter>소스 파일\난수 생성</Filter>
+    </ClCompile>
+    <ClCompile Include="test_lotto.cpp">
+      <Filter>소스 파일\난수 생성</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Person.h">
+      <Filter>헤더 파일\파일분할01</Filter>
+    </ClInclude>
+    <ClInclude Include="Student.h">
+      <Filter>헤더 파일\파일분할01</Filter>
+    </ClInclude>
+    <ClInclude Include="Candy.h">
+      <Filter>헤더 파일\파일분할 실습</Filter>
+    </ClInclude>
+    <ClInclude Include="Snack.h">
+      <Filter>헤더 파일\파일분할 실습</Filter>
+    </ClInclude>
+    <ClInclude Include="Chocolate.h">
+      <Filter>헤더 파일\파일분할 실습</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
