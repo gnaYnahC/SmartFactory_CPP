@@ -81,13 +81,8 @@ int main() {
 
 	for (int i = 0; i < size; i++) {
 		snackBasket[i]->snack_status();
+		delete snackBasket.at(i);
 		cout << "--------------------\n";
 	}
-
-	for (int i = 0; i < size; i++) {
-		delete snackBasket.at(i);
-	}
-	for (int j = 0; j < size; j++) {
-		snackBasket.pop_back();
-	}
+	snackBasket.clear();
 }

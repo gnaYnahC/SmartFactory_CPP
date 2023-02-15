@@ -89,13 +89,12 @@ int main() {
 
 	for (Snack* snack : snackBasket) { // for-each문, (배열의 원소, 원하는 변수이름 : 배열)
 		snack->showInfo();
-	}
-	
-	for (Snack* snack : snackBasket) { 
 		delete snack;
 	}
-
 	snackBasket.clear();
 
+	//for (Snack* snack : snackBasket) { 
+	//	delete snack;
+	//}
 
 }

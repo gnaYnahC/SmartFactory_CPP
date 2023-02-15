@@ -54,10 +54,13 @@
     <ClCompile Include="Random_practice.cpp">
       <Filter>소스 파일\난수 생성</Filter>
     </ClCompile>
-    <ClCompile Include="test_rotto.cpp">
+    <ClCompile Include="test_lotto.cpp">
       <Filter>소스 파일\난수 생성</Filter>
     </ClCompile>
-    <ClCompile Include="test_lotto.cpp">
+    <ClCompile Include="test_lotto2.cpp">
+      <Filter>소스 파일\난수 생성</Filter>
+    </ClCompile>
+    <ClCompile Include="test_lotto3.cpp">
       <Filter>소스 파일\난수 생성</Filter>
     </ClCompile>
   </ItemGroup>

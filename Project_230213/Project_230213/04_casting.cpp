@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// 업캐스팅: 자식 클래스의 객체가 부모 클래스의 인스턴스로 생성
-// 다운캐스팅: 
-
 class Person {
 protected:
 	string name;
@@ -60,15 +57,15 @@ int main() {
 	s->test(); //가능해짐
 	p->set_name("길동이"); 
 	cout << p->get_name() << " " << s->get_name() << endl;
-	s->set_name("춘향이"); // 힙영역? 스택영역?
+	s->set_name("춘향이"); 
 	cout << p->get_name() << " " << s->get_name() << endl;
 
 	Student& s1 = *(Student*)p; // 다운캐스팅: Student*이라는 주소로 p를 형변환
-	s1.set_name("코디"); // 힙영역? 스택영역?
+	s1.set_name("코디"); 
 	cout << p->get_name() << " " << s1.get_name() << endl;
 
 	Student s2 = *(Student*)p; // 참조X , p의 값을 대입
-	s2.set_name("코양"); // 힙영역? 스택영역?
+	s2.set_name("코양"); 
 	cout << p->get_name() << " " << s2.get_name() << endl;
 
 	//s사용까지 하고 나서 반납

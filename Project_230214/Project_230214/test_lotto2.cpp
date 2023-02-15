@@ -8,6 +8,7 @@ int main() {
 	std::srand(time(NULL));
 	int lotto[6] = {};
 	int count = 0;
+
 	while (count<6) {
 		bool fact = false;
 		int num = rand() & 45 + 1;

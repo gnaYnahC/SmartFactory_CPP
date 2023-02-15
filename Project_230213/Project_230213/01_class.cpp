@@ -44,8 +44,9 @@ int main() {
 	Person* s1 = new Student();//동적 메모리 선언
 	s1->info(); // 동적 바인딩, 자식클래스(Student) info실행
 	s1->test(); // Person에 test메소드가 없었다면, Person에 없는 멤버에는 접근할 수 없음
+
 	//또 다른 호출법
-	(*s1).info(); // ss = 주소값, *ss = ss에 담긴 값
+	(*s1).info(); // s1 = 주소, *s1 = s1 주소에 담긴 값
 	delete s1;
 
 	//또다른 방법(동적메모리로 만든게 아님)
