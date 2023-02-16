@@ -1,60 +1,83 @@
 #include <iostream>
 #include <cstdlib>
-#include <ctime>
-#include <algorithm>
 
 using namespace std;
+//using std::cout;
 
-int main()
-{
-    // Generate 6 random numbers
-    srand(time(NULL));
-    int computer_numbers[6];
-    for (int i = 0; i < 6; i++) {
-        computer_numbers[i] = rand() % 25 + 1;
-    }
+int main(){
+	int comp_num[6] = {}; // 컴퓨터 숫자 배열
+	int c = 0;
+	srand(time(NULL));
+	
+	while (c < 6) {
+		int num = rand();
+		int rand_num = num & 24 + 1; // 1~ 25 까지의 수 뽑기
+		bool same_num = false; // 중복 숫자 제외 bool형
 
-    // Get user input
-    int user_numbers[6];
-    cout << "Enter 6 numbers from 1 to 25, separated by spaces: ";
-    for (int i = 0; i < 6; i++) {
-        cin >> user_numbers[i];
-        if (user_numbers[i] > 26) {
-            cout << "잘못된 숫자입니다. 다시 입력해주세요: ";
-            cin >> user_numbers[i-1];
-        }
-    }
+		for (int i = 0; i < 6; i++) {
+			if (comp_num[i] == rand_num) { // 중복시 제외
+				same_num = true;
+				break;
+			}
+		}
+		
+		if (!same_num) {
+			comp_num[c] = rand_num;
+			c++;
+		}
+	}
 
-    // Sort the arrays for easier comparison
-    sort(computer_numbers, computer_numbers + 6);
-    sort(user_numbers, user_numbers + 6);
+	int user_num[6] = {};
+	for (int i = 0; i < 6; i++) {
+		cout << "1 ~ 25 사이의 숫자를 입력해주세요: ";
+		cin >> user_num[i];
+		while (user_num[i] > 26 || user_num[i]<=0) {
+			cout << "잘못된 숫자입니다. 다시 입력해주세요: ";
+			cin >> user_num[i];
+			break;
+		}
+	}
 
-    // Compare the arrays and determine the rank
-    int count = 0;
-    for (int i = 0; i < 6; i++) {
-        if (computer_numbers[i] == user_numbers[i]) {
-            count++;
-        }
-    }
+	int collect = 0; // 일치하는 숫자 개수
+	for (int i = 0; i < 6; i++) {
+		if (comp_num[i] == user_num[i]) {
+			collect++;
+		}
+	}
 
-    for(int)
-    cout << "당첨번호 공개!!\n" << computer_numbers;
+	cout << "당첨번호 공개!!\n";
+	
+	for (int i = 0; i < 6; i++) {
+		cout << comp_num[i] << " ";
+	}
 
-    if (count == 0) {
-        cout << "You're in 7th place." << endl;
-    }
-    else if (count == 1) {
-        cout << "You're in 6th place." << endl;
-    }
-    else if (count == 2) {
-        cout << "You're in 5th place." << endl;
-    }
-    else if (count == 6) {
-        cout << "You win!" << endl;
-    }
-    else {
-        cout << "Sorry, no rank for you." << endl;
-    }
+	cout << endl;
+	cout << "당신의 등수를 알려드립니다! \n";
 
-    return 0;
+	if (collect == 0) {
+		cout << "일치하는 숫자 0개: 7등임다.." << endl;
+	}
+	else if (collect == 1) {
+		cout << "일치하는 숫자 1개: 6등임다.." << endl;
+	}
+	else if (collect == 2) {
+		cout << "일치하는 숫자 2개: 5등임다.." << endl;
+	}
+	else if (collect == 3) {
+		cout << "일치하는 숫자 3개: 4등임다.." << endl;
+	}
+	else if (collect == 4) {
+		cout << "일치하는 숫자 4개: 3등임다!" << endl;
+	}
+	else if (collect == 5) {
+		cout << "일치하는 숫자 2개: 2등임다!" << endl;
+	}
+	else {
+		cout << "일등!! 축하드립니다!" << endl;
+	}
+	cout << "사용자가 입력한 숫자: ";
+	for (int i = 0; i < 6; i++) {
+		cout << user_num[i];
+	}
+	
 }
