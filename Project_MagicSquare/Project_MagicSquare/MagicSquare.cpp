@@ -8,7 +8,6 @@ int main() {
 	while (n % 2 == 0) {
 		cout << "입력한 수가 홀수가 아닙니다. 홀수로 입력해주세요: ";
 		cin >> n;
-		continue;
 	}
 	//2차원 벡터 배열 생성
 	vector<vector<int>> magicSquare(n, vector<int>(n)); // 초기화
