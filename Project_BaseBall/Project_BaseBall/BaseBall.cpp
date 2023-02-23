@@ -2,17 +2,18 @@
 #include <ctime>
 #include <iostream>
 using namespace std;
+using std::cout;
 
 int main() {
-  srand(time(NULL));        // 시간을 기준으로 난수 생성
-  const int number = 3;     // 상수 선언
+  srand(time(NULL));          // 시간을 기준으로 난수 생성
+  const int number = 3;       // 상수 선언
   int comp_num[number] = {};  // 컴퓨터가 뽑은 숫자 저장 배열
-  int user_num[number] = {};   // 사용자가 숫자를 저장 배열
-  int strike = 0;           // 스트라이크 개수 저장 변수
-  int ball = 0;             // 볼 개수 저장 변수
-  int count = 0;            // 시도한 횟수를 저장할 변수
+  int user_num[number] = {};  // 사용자가 숫자를 저장 배열
+  int strike = 0;             // 스트라이크 개수 저장 변수
+  int ball = 0;               // 볼 개수 저장 변수
+  int count = 0;              // 시도한 횟수를 저장할 변수
 
-  // 랜덤으로 3개의 숫자를 뽑아 comp_num 배열에 저장 (중복 없음)
+  // 랜덤으로 3개의 숫자를 뽑아 comp_num 배열에 저장 (중복 없이)
   for (int i = 0; i < number; i++) {
     bool found = true;
     while (found) {
@@ -42,7 +43,7 @@ int main() {
       }
     }
     if (!valid) {
-      cout << "잘못된 입력입니다. 게임을 종료합니다." << endl;
+      cout << "게임을 종료합니다." << endl;
       break;
     }
 
@@ -62,7 +63,7 @@ int main() {
     count++;
     cout << "결과: " << strike << " 스트라이크, " << ball << " 볼" << endl;
 
-    if (strike == 3) {
+    if (strike >= 3) {
       cout << "축하합니다! " << count << "회만에 정답을 맞추셨습니다." << endl;
       break;
     }
