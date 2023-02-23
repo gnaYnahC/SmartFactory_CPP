@@ -2,7 +2,6 @@
 #include <ctime>
 #include <iostream>
 using namespace std;
-using std::cout;
 
 int main() {
   srand(time(NULL));          // 시간을 기준으로 난수 생성
