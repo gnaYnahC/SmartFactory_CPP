@@ -47,8 +47,6 @@ bool isCollision(const Position& DinoPos, const Position& TreePos,
          (DinoBottom > TreeTop) && (DinoTop < TreeBottom);
 }
 
-
-
 int main() {
   int score = 0;
   // SFML 윈도우을 열고 title을 설정
