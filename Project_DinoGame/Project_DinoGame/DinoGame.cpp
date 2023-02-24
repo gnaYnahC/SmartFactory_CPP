@@ -1,4 +1,5 @@
 ﻿// SFML 라이브러리를 이용
+// 시스템, 윈도우, 그래픽, 오디오 및 네트워크의 5개 모듈로 구성
 #include <SFML/Graphics.hpp>
 #include <iostream>
 using namespace sf;
@@ -46,19 +47,7 @@ bool isCollision(const Position& DinoPos, const Position& TreePos,
          (DinoBottom > TreeTop) && (DinoTop < TreeBottom);
 }
 
-// Text 설정 함수
-int textPrint(Text& textMsg, Font& font, int size, float x, float y,
-              const Color& color, const Color& outColor, String p) {
-  textMsg.setFont(font);              // 폰트
-  textMsg.setCharacterSize(size);     // 크기
-  textMsg.setPosition(x, y);          // x, y 위치
-  textMsg.setFillColor(color);        // 색
-  textMsg.setOutlineColor(outColor);  // 글자 테두리 색
-  textMsg.setOutlineThickness(1.f);   // 글자 테두리 굵기
-  textMsg.setString(p);               // 출력할 문자열
 
-  return 0;
-}
 
 int main() {
   int score = 0;
