@@ -2,15 +2,19 @@
 #include <ctime>
 
 using namespace std;
-using std::cout;
 
 int main() {
 
 	srand(time(NULL));
 
+	/*int number = 6;
 	int comp_num[6] = {};
-	int user_num[6] = {};
-	int number = 6;
+	int user_num[6] = {};*/
+	
+	const int number = 6;
+	int comp_num[number] = {};
+	int user_num[number] = {};
+
 
 	// 컴퓨터가 1~25 중 중복 없이 6개의 수를 무작위로 선택
 	for (int i = 0; i < number; i++) {
