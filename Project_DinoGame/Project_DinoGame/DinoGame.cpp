@@ -1,7 +1,10 @@
-﻿#include <SFML/Graphics.hpp>
+﻿// SFML 라이브러리를 이용
+// 시스템, 윈도우, 그래픽, 오디오 및 네트워크의 5개 모듈로 구성
+#include <SFML/Graphics.hpp>
 #include <iostream>
 using namespace sf;
 
+// #define 지시문을 사용하여 게임 창의 너비와 높이를 정의
 #define width 1000
 #define height 300
 
@@ -67,8 +70,13 @@ int main() {
   DinoArr[1] = Sprite(t2);
 
   // 공룡 바닥 설정
+<<<<<<< HEAD
   // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간할당, 종료되기 전까지 유지) 
   // const - 상수 선언을 위한 키워드
+=======
+  // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간 할당, 종료되기 전까지 유지) 
+  // const - 상수 선언을 위한 키워드 (해당 변수는 값 변경 불가능)
+>>>>>>> 0e7450c2ed7d74db837057712a06ac7fe2d5bb45
   static const int DINO_BOTTOM = height - t1.getSize().y;
   Position DinoPos;
   DinoPos.x = 30;
@@ -99,12 +107,12 @@ int main() {
   const int totalFrames = 5;  // 발 모양을 변경할 총 프레임 수
 
   // 공룡 점프
-  const int JumpPower = 9;  // 점프력
+  const int JumpPower = 7;  // 점프력
   bool isJumping = false;   // 점프중
   bool isBottom = true;     // 걷는중
 
   // 나무 속도
-  const int TreeSpeed = 10;
+  const int TreeSpeed = 9;
 
   // 구름 속도
   const int CloudSpeed = 3;
@@ -197,7 +205,7 @@ int main() {
     window.draw(Cloud1);                   // 구름1
     window.draw(Cloud2);                   // 구름2
 
-    // 윈도우 디스플레이 출력
+    // 프레임을 스크린에 출력
     window.display();
   }
   return 0;

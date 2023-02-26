@@ -2,6 +2,7 @@
 #include <iostream>
 
 using namespace std;
+<<<<<<< HEAD
 
 bool isDuplicated(int arr[], int size, int num) {
   for (int i = 0; i < size; i++) {
@@ -17,6 +18,8 @@ void calculateRank(int count) {
   cout << "맞춘 개수: " << count << endl;
   cout << rank << "등 입니다! 축하합니다" << endl;
 }
+=======
+>>>>>>> 0e7450c2ed7d74db837057712a06ac7fe2d5bb45
 
 int main() {
   srand(time(NULL));
@@ -25,6 +28,7 @@ int main() {
   int comp_num[NUMBER] = {};
   int user_num[NUMBER] = {};
 
+<<<<<<< HEAD
   // 컴퓨터가 1~25 중 중복 없이 6개의 수를 무작위로 선택
   for (int i = 0; i < NUMBER; i++) {
     comp_num[i] = rand() % 25 + 1;
@@ -36,6 +40,16 @@ int main() {
       }
     }
   }
+=======
+	/*int number = 6;
+	int comp_num[6] = {};
+	int user_num[6] = {};*/
+	
+	const int number = 6;
+	int comp_num[number] = {};
+	int user_num[number] = {};
+
+>>>>>>> 0e7450c2ed7d74db837057712a06ac7fe2d5bb45
 
   // 플레이어로부터 1~25 중 중복 없이 6개의 수를 입력받아 user_num 배열에 저장
   cout << "6가지의 1~25까지의 숫자를 입력해주세요" << endl;
