@@ -67,9 +67,8 @@ int main() {
   DinoArr[1] = Sprite(t2);
 
   // 공룡 바닥 설정
-  // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간
-  // 할당, 종료되기 전까지 유지) const - 상수 선언을 위한 키워드 (해당 변수는 값
-  // 변경 불가능)
+  // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간할당, 종료되기 전까지 유지) 
+  // const - 상수 선언을 위한 키워드
   static const int DINO_BOTTOM = height - t1.getSize().y;
   Position DinoPos;
   DinoPos.x = 30;
@@ -94,7 +93,7 @@ int main() {
 
   // 캐릭터 애니메이션을 위한 변수
   int footShapeIndex = 0;  // 캐릭터 발 모양을 결정
-  int currentFrame = 0;    // 현재 프레임 수 저장
+  float currentFrame = 0.0f;    // 현재 프레임 수 저장
   float frameDelay = 0.4f;  // 한 프레임당 대기 시간
              // 실수형으로 선언되어 있지 않으면 소수점 이하의 값이 버려지게 됨
   const int totalFrames = 5;  // 발 모양을 변경할 총 프레임 수
