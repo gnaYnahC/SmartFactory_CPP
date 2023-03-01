@@ -5,8 +5,8 @@
 using namespace sf;
 
 // #define 지시문을 사용하여 게임 창의 너비와 높이를 정의
-#define width 1000
-#define height 300
+const int width = 1000;
+const int height = 300;
 
 // 구조체, Position 정의
 struct Position {
@@ -70,13 +70,8 @@ int main() {
   DinoArr[1] = Sprite(t2);
 
   // 공룡 바닥 설정
-<<<<<<< HEAD
-  // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간할당, 종료되기 전까지 유지) 
-  // const - 상수 선언을 위한 키워드
-=======
   // static - 정적 변수를 선언하기 위한 키워드 (프로그램 실행 시 메모리 공간 할당, 종료되기 전까지 유지) 
   // const - 상수 선언을 위한 키워드 (해당 변수는 값 변경 불가능)
->>>>>>> 0e7450c2ed7d74db837057712a06ac7fe2d5bb45
   static const int DINO_BOTTOM = height - t1.getSize().y;
   Position DinoPos;
   DinoPos.x = 30;

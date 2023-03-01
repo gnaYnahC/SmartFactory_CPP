@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="clean.cpp" />
     <ClCompile Include="DinoGame.cpp" />
   </ItemGroup>
   <ItemGroup>
